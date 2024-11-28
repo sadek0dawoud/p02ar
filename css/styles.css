@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --myBlue: #2c3e50;
+  --myGreen: #1abc9c;
+  --myWhite: #ffffff;
+  --mainFont: "Montserrat";
+  --titleFontSize : 40px;
+}
+nav {
+  background-color: var(--myBlue);
+  color: var(--myWhite);
+  font-family: var(--mainFont);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 24px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav #menuItems {
+  width: 33%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--myWhite);
+}
+nav #menuButton {
+  display: none;
+}
+/* ----------------------  banner ---------------------------- */
+#banner {
+  text-align: center;
+  background-color: var(--myGreen);
+  padding-top: 30px; padding-bottom: 50px;
+}
+#banner > * {
+  margin-top: 25px;
+}
+#banner h1 {
+  color: var(--myWhite);
+  text-transform: uppercase;
+  font-size: var(--titleFontSize);
+  font-family: var(--mainFont);
+}
+
+#bannerPhoto {
+  width: 240px;
+  display: inline-block;
+}
+.lineStarLine {
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lineStarLine hr {
+  width: 25%;
+  height: 7px;
+  background-color: var(--myWhite);
+  border-radius: 5px;
+}
+.lineStarLine svg {
+  fill: var(--myWhite) !important;
+} 
+/* -----------------------portfolio------------------------------------- */
+#portfolio {
+  text-align: center;
+  background-color: var(--myWhite);
+  padding-top: 50px; padding-bottom: 50px;
+}
+#portfolio h1 {
+  text-transform: uppercase;
+  color: var(--myBlue);
+  font-size: var(--titleFontSize);
+  font-family: var(--mainFont);
+}
+#portfolio .lineStarLine hr  {
+  background-color: var(--myBlue);
+}
+#portfolio .lineStarLine svg {
+  fill: var(--myBlue) !important;
+}
+.portfolioCard {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#porfolioGallery {
+  min-height: 100vh;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+.portfolioCard > div {
+  text-align: center;
+  font-family: var(--mainFont);
+  color: var(--myWhite);
+  font-size: 100px;
+  font-weight: bold;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  width: 100%; height: 100%;
+  position: relative; top: 0; left: 0;
+  background-color: var(--myGreen);
+  opacity: 0;
+  transition: 0.3s all;
+}
+.portfolioCard > div:hover {
+  opacity: 0.75;
+  transition: 0.7s all;
+}
+nav #menuButton {
+  display: none;
+}
+/* ........................media......................... */
+@media only screen and (max-width: 576px) {
+  nav {
+      color: red;
+  }
+  nav #menuItems {
+      display: none;
+      position: absolute;
+      left: 0; top: 100px;
+      width: 100%;
+      background-color: var(--myBlue);
+      padding-left: 10%;
+  }
+  nav #menuButton {
+      width: 20px;
+      display: block;
+  }
+  *{
+    margin: 0 !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #porfolioGallery{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .portfolioCard > div {
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+  }
+  }
+  /* -------------------------------About--------------------------- */
+  .About{
+    /* border: 75px; */
+    padding: 100px 0;
+    margin: 25px;
+    background-color: var(--myGreen);
+  }
+  .text-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-about1{
+    width: 330px;
+    margin:0 100px;
+  }
+  .text-about2{
+    width: 330px;
+    margin:0 100px;
+  }
+  .put-about{
+    padding:  10px;
+    margin: 57px !important;
+    margin: auto;
+    text-decoration: none;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+    background-color: var(--myGreen);
+  }
+  .put-about:hover{
+    background-color: var(--myWhite);
+  }
+   /* Around */
+   .around{
+    margin-top: 50px;
+    background-color: var(--myBlue);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 20px;
+    padding: 50px;
+    height:  300px;
+  }
+  @media only screen and (max-width: 576px) {
+    .text-about{
+      text-align: center;
+      font-weight: 15px;
+      display: flex;
+      gap: 25px;
+    }
+    .input-contacte{
+        position: relative;
+        top: 0px;
+    }
+    .line-Contac{
+      position: relative;
+      top: 0px;
+    }
+    .around{
+      height: 100%;
+      margin-top: 20px;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .text-about1{
+      width: 330px;
+      margin: 0px 150px;
+    }
+    .text-about2{
+      width: 254px;
+      margin: 0px 150px;
+    }
+    }
+  .input-contacte{
+    display: grid;
+    margin-top: 50px;
+  }
+  .input-contacte > input{
+    margin: 10px;
+    border:  0px;
+    border-bottom:groove;
+    width: 60%;
+    display: grid;
+    justify-items: center;
+    margin: auto;
+  }
+  .input-contacte > label{
+    justify-content: left;
+    display: grid;
+    padding: 15px;
+  }
+  .p1{
+    background-color: #131a22;
+    height: 70px;
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+  }
+  .tex-end{
+    margin: auto;
+  }
+  .icon{
+    padding: 4%;
+  }
+  i{
+    background-color: var(--myWhite);
+    border-radius: 50px;
+  }
+  .icon i{
+    color: #131a22;
+    background-color: rgb(163, 167, 170);
+    width: 64px;
+    height: 70px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+     border-radius: 50px;   
+  }
+  .icon i:hover{
+    background-color: var(--myWhite);
+  }
+  @media only screen and (max-width: 576px) {
+    .bt1{
+      background-color: var(--myWhite);
+      color: black;
+      width: 50px;
+      height: 30px;
+      border-radius: 10px;
+     }
+  }
